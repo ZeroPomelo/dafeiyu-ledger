@@ -1,0 +1,38 @@
+# ---------- 构建产物 ----------
+/build/
+/DaFeiYuLedger.apk
+*.idsig
+*.ap_
+*.dex
+*.class
+
+# ---------- 签名材料（绝对不要提交）----------
+/keystore/
+*.jks
+*.keystore
+*.p12
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+
+# ---------- IDE / 编辑器 ----------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*~
+
+# ---------- 本机构建配置 ----------
+local.properties
+.sdk-path
+
+# ---------- 系统垃圾 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 日志 ----------
+*.log

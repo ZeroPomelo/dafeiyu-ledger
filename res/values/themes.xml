@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:colorAccent">@color/brand</item>
+        <item name="android:colorPrimary">@color/brand</item>
+        <item name="android:colorPrimaryDark">@color/light_bg</item>
+        <item name="android:windowBackground">@color/light_bg</item>
+        <item name="android:statusBarColor">@color/light_bg</item>
+        <item name="android:navigationBarColor">@color/light_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/light_text</item>
+        <item name="android:textColorSecondary">@color/light_text_sub</item>
+        <item name="android:textColorHint">@color/light_text_sub</item>
+
+        <item name="colBg">@color/light_bg</item>
+        <item name="colCard">@color/light_card</item>
+        <item name="colText">@color/light_text</item>
+        <item name="colTextSub">@color/light_text_sub</item>
+        <item name="colLine">@color/light_line</item>
+        <item name="colChipBg">@color/light_chip_bg</item>
+        <item name="colChipLine">@color/light_chip_line</item>
+        <item name="colChipText">@color/light_chip_text</item>
+        <item name="colOverlay">@color/light_overlay</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:colorAccent">@color/brand</item>
+        <item name="android:colorPrimary">@color/brand</item>
+        <item name="android:colorPrimaryDark">@color/dark_bg</item>
+        <item name="android:windowBackground">@color/dark_bg</item>
+        <item name="android:statusBarColor">@color/dark_bg</item>
+        <item name="android:navigationBarColor">@color/dark_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/dark_text</item>
+        <item name="android:textColorSecondary">@color/dark_text_sub</item>
+        <item name="android:textColorHint">@color/dark_text_sub</item>
+
+        <item name="colBg">@color/dark_bg</item>
+        <item name="colCard">@color/dark_card</item>
+        <item name="colText">@color/dark_text</item>
+        <item name="colTextSub">@color/dark_text_sub</item>
+        <item name="colLine">@color/dark_line</item>
+        <item name="colChipBg">@color/dark_chip_bg</item>
+        <item name="colChipLine">@color/dark_chip_line</item>
+        <item name="colChipText">@color/dark_chip_text</item>
+        <item name="colOverlay">@color/dark_overlay</item>
+    </style>
+
+    <!-- 记一笔的底部弹层 -->
+    <style name="SheetDialog" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/SheetAnim</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="SheetDialog.Dark" parent="@android:style/Theme.Material.Dialog.NoActionBar">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/SheetAnim</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="SheetAnim">
+        <item name="android:windowEnterAnimation">@anim/sheet_in</item>
+        <item name="android:windowExitAnimation">@anim/sheet_out</item>
+    </style>
+</resources>

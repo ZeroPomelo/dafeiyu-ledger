@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 品牌色 / 语义色 -->
+    <color name="brand">#2F6FED</color>
+    <color name="expense">#F2637B</color>
+    <color name="income">#23B48C</color>
+    <color name="expense_dark">#F07185</color>
+    <color name="income_dark">#35C79A</color>
+
+    <!-- 浅色 -->
+    <color name="light_bg">#F4F6FB</color>
+    <color name="light_card">#FFFFFF</color>
+    <color name="light_text">#1F2A37</color>
+    <color name="light_text_sub">#8A96A8</color>
+    <color name="light_line">#E6EBF5</color>
+    <color name="light_chip_bg">#F1F4FB</color>
+    <color name="light_chip_line">#DCE3F2</color>
+    <color name="light_chip_text">#5A6B85</color>
+    <color name="light_overlay">#66000000</color>
+
+    <!-- 深色 -->
+    <color name="dark_bg">#12161D</color>
+    <color name="dark_card">#1B212B</color>
+    <color name="dark_text">#EAF0F8</color>
+    <color name="dark_text_sub">#7F8C9F</color>
+    <color name="dark_line">#272F3B</color>
+    <color name="dark_chip_bg">#232B37</color>
+    <color name="dark_chip_line">#303A48</color>
+    <color name="dark_chip_text">#A8B4C6</color>
+    <color name="dark_overlay">#99000000</color>
+
+    <!-- 自适应图标底色（取自原图背景蓝） -->
+    <color name="ic_launcher_background">#5B9BF3</color>
+</resources>

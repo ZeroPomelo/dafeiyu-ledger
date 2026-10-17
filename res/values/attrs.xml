@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题色属性：浅色 / 深色两套主题各给一套值，布局与代码统一从这里取色 -->
+    <attr name="colBg" format="color" />
+    <attr name="colCard" format="color" />
+    <attr name="colText" format="color" />
+    <attr name="colTextSub" format="color" />
+    <attr name="colLine" format="color" />
+    <attr name="colChipBg" format="color" />
+    <attr name="colChipLine" format="color" />
+    <attr name="colChipText" format="color" />
+    <attr name="colOverlay" format="color" />
+</resources>

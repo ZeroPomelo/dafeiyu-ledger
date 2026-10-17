@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colBg"
+    android:orientation="vertical">
+
+    <!-- ============ 消费 / 入账 模式 ============ -->
+    <LinearLayout
+        android:id="@+id/normalBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/totalCard"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/header_expense"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTotalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费合计"
+                android:textColor="#EEFFFFFF"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvPeriodTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="¥ 0.00"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPeriodSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="共 0 笔"
+                android:textColor="#D9FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnPrev"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="?attr/colChipText"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnDate"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/pill_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="日期"
+                android:textColor="?attr/colText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btnNext"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="?attr/colChipText"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.dafeiyu.ledger.PieChartView
+            android:id="@+id/pie"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- ============ 月/年收支差 模式 ============ -->
+    <LinearLayout
+        android:id="@+id/diffBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnYearPrev"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="?attr/colChipText"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnYear"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="年份"
+                android:textColor="?attr/colText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btnYearNext"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="?attr/colChipText"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.dafeiyu.ledger.PieChartView
+            android:id="@+id/pieYear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年收支差："
+                android:textColor="?attr/colTextSub"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvYearDiff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="?attr/colText"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnMonthPrev"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="?attr/colChipText"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnMonth"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="月份"
+                android:textColor="?attr/colText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btnMonthNext"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/pill_bg"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="?attr/colChipText"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.dafeiyu.ledger.PieChartView
+            android:id="@+id/pieMonth"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="月收支差："
+                android:textColor="?attr/colTextSub"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvMonthDiff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="?attr/colText"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ============ 底部控制面板 ============ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card_bg"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:id="@+id/segType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/segPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal" />
+    </LinearLayout>
+</LinearLayout>
